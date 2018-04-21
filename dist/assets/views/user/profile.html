@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for making website for mobile-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="initial-scale=1, user-scalable=no">
+
+
+  <meta charset="UTF-8">
+  <title>User Profile</title>
+  <link href="../../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="../../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+  <!-- STYLE sheet comes after all the libraries are loaded. Document style-->
+
+  <link href="../../css/style.css" rel="stylesheet"/>
+
+</head>
+
+<body>
+
+<!-- Top Nav -->
+<nav class="navbar navbar-default navbar-fixed-top top-navbar-custom">
+  <div class="container-fluid">
+
+    <!--heading on the nav bar-->
+    <div class="navbar-header pull-left">
+      <a class="navbar-brand thick">
+        <b>Profile</b>
+      </a>
+    </div>
+
+    <!--tick mark-->
+    <div class="navbar-text pull-right">
+      <a href="profile.html" class="navbar-link">
+        <span class="glyphicon glyphicon-ok"></span>
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+
+<div class="container">
+  <form>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text"
+             class="form-control"
+             id="username"
+             placeholder="walice">
+    </div>
+  </form>
+
+  <form>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email"
+             class="form-control"
+             id="email"
+             placeholder="alice.wonderland@unicorn.com">
+    </div>
+  </form>
+
+  <form>
+    <div class="form-group">
+      <label for="first-name">First Name</label>
+      <input type="text"
+             class="form-control"
+             id="first-name"
+             placeholder="Alice">
+    </div>
+  </form>
+
+  <form>
+    <div class="form-group">
+      <label for="last-name">Last Name</label>
+      <input type="text"
+             class="form-control"
+             id="last-name"
+             placeholder="Wonderland">
+    </div>
+  </form>
+
+  <form>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password"
+             class="form-control"
+             id="password"
+             placeholder="Password">
+    </div>
+  </form>
+
+  <form>
+    <div class="form-group">
+      <label for="verifyPassword">Verify Password</label>
+      <input type="password"
+             class="form-control"
+             id="verifyPassword"
+             placeholder="Verify Password">
+    </div>
+  </form>
+
+
+  <a class="btn btn-primary btn-block"
+     href="../website/website-list.html">Your Posts</a>
+
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <a class="btn btn-danger btn-block "
+     href="login.html" >Logout</a>
+
+</div>
+
+<!-- Footer -->
+<nav id="user-footer" class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-text pull-right">
+      <a href="profile.html">
+        <span class="glyphicon glyphicon-user"></span>
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+
+</body>
+</html>

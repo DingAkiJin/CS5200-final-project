@@ -38,7 +38,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Point static path to dist -- For building
-// app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 // CORS
 app.use(function(req, res, next) {
@@ -67,10 +67,10 @@ serverSide(app);
 
 
 // For Build: Catch all other routes and return the index file
-// app.use('*', function (req, res) {
-//   const index = path.join(__dirname, 'dist', 'index.html');
-//   res.sendFile(index);
-// });
+app.use('*', function (req, res) {
+  const index = path.join(__dirname, 'dist', 'index.html');
+  res.sendFile(index);
+});
 
 
 var PPORT = process.env.PORT || port;
