@@ -1,0 +1,43 @@
+<nav class="nav navbar navbar-default navbar-fixed-top ">
+  <div class="container-fluid">
+    <!--left icon-->
+    <p class="navbar-text pull-left">
+      <a [routerLink]="['/profile' ]" class="navbar-link">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+    </p>
+
+    <!--heading on the nav bar-->
+    <p class="navbar-header pull-left">
+      <a class="navbar-brand thick">
+        <b>Follow List</b>
+      </a>
+    </p>
+
+  </div>
+</nav>
+
+<div class="container-fluid hf-body">
+  <ul class="list-group">
+    <li  *ngFor = "let follow of user.follows"
+         class="list-group-item">
+      <a>{{follow.username}}</a>
+      <a>
+        <span (click)="unfollowUser(follow.username)" class="pull-right glyphicon glyphicon-remove"></span>
+      </a>
+    </li>
+  </ul>
+
+</div>
+
+<!-- Footer -->
+<nav class="nav navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <p class="navbar-text pull-right">
+      <a [routerLink]="['/profile']">
+        <span class="glyphicon glyphicon-user"></span>
+      </a>
+    </p>
+
+  </div>
+</nav>

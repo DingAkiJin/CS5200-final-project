@@ -1,0 +1,76 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="row container-fluid">
+
+    <div class="col-sm-12">
+
+      <div class="navbar-text pull-left" style="margin-left: 0px;">
+        <a [routerLink]="['/user', 'post']" class="navbar-link">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+      </div>
+
+      <div class="navbar-header pull-left">
+        <a class="navbar-brand">
+          <b style="text-transform: capitalize">New Post</b>
+        </a>
+      </div>
+
+      <div class="navbar-text pull-right" >
+        <a (click)="CreatePost()" class="navbar-link">
+          <span class="glyphicon glyphicon-ok"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid hf-body">
+  <div *ngIf=flag
+       class="alert alert-danger">
+    {{error}}
+  </div>
+  <form novalidate name="model.myform">
+    <div class="form-group">
+      <label for="Name">Name</label>
+      <input [(ngModel)]="postName"
+             type="text"
+             class="form-control"
+             id="Name"
+             name="postname"
+             placeholder="Name"
+             required>
+      <!--<span class="alert-class"-->
+      <!--*ngIf="flag">{{alert}}</span>-->
+    </div>
+    <div>
+    <select [(ngModel)]="choice" name="choice">
+      <option *ngFor="let choice of choices" value={{choice}}>{{choice}}</option>
+    </select>
+    </div>
+    <quill-editor [(ngModel)]="text" name="text"></quill-editor>
+  </form>
+  <br>
+  <div class="hf-btn">
+    <a class = "btn btn-danger btn-block"
+       (click)="Delete()">
+      Delete
+    </a>
+    <a class = "btn btn-primary btn-block"
+       (click)="Cancel()">
+      Cancel
+    </a>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<nav class="nav navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <p class="navbar-text pull-right">
+      <a [routerLink]="['/profile']">
+        <span class="glyphicon glyphicon-user"></span>
+      </a>
+    </p>
+  </div>
+</nav>
+

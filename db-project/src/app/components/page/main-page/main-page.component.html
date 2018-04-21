@@ -1,0 +1,86 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="row container-fluid">
+
+    <div class="col-sm-12">
+
+
+      <div class="navbar-text pull-left" style="margin-left: 0px;">
+        <a [routerLink]="['']" class="navbar-link">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+      </div>
+
+
+      <div class="navbar-header pull-left">
+        <a class="navbar-brand">
+          <b>Welcome</b>
+        </a>
+      </div>
+
+      <div class="navbar-text pull-right">
+        <a [routerLink]="['/register']">
+          <b>Register </b>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <form>
+    <div class="form-group">
+      <input [(ngModel)]="title"
+             type="text"
+             class="form-control"
+             name="search"
+             id="search"
+             placeholder="Search for News">
+    </div>
+  </form>
+  <button (click) = "searchNewsByCategory(title)" class = "btn btn-primary btn-block">Search</button>
+
+  <br>
+
+  <div style="border: solid; border-radius: 20%; border-width: 0.5px;">
+    <h1 style="text-align: center; font-family: 'Times New Roman';"><b>Inteli-News</b></h1>
+    <p style="text-align: center; font-family: 'Times New Roman'; padding-left: 6%; padding-right: 6%; font-size: large">
+
+      Our Web News App is a place that promotes a more enlightened discussion on current news trends by enabling users to
+      follow links to news articles from top media outlets, as well as posts from our verified, world renowned writers and
+      industry professionals. Our subscribed users are able to post questions and receive an in-depth reply by our industry professionals.
+    </p>
+  </div>
+
+
+  <br>
+
+  <div>
+    <h3
+      style="text-align: left; font-family: 'Times New Roman'">Articles From Outside Sources:</h3>
+
+
+
+    <ul class = "list-group">
+      <li class = "list-group-item" *ngFor = "let news of result.articles">
+        <a  href = {{news.url}}>
+          {{news.title}}
+        </a>
+        <p>{{news.author}}</p>
+      </li>
+    </ul>
+
+  </div>
+
+</div>
+
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-text pull-right">
+      <!--<a [routerLink]="['/profile']">-->
+      <!--<span class="glyphicon glyphicon-user"></span>-->
+      <!--</a>-->
+    </div>
+  </div>
+</nav>

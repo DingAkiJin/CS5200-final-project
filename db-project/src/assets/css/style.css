@@ -1,0 +1,145 @@
+input {
+  margin-bottom: 5px;
+}
+
+.btn {
+  margin-bottom: 5px;
+}
+
+body {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover
+{
+  text-decoration: none;
+}
+
+.top-navbar-custom {
+  background-color: black;
+}
+
+.top-navbar-custom b {
+  color: white;
+}
+
+.top-navbar-custom .glyphicon {
+  color: white;
+}
+
+.footer-custom {
+  background-color: black;
+}
+
+.footer-custom  .glyphicon {
+  color: white;
+}
+
+#user-top-navbar {
+  background-color: royalblue;
+}
+
+#user-top-navbar b {
+  color: white;
+}
+
+#user-top-navbar .glyphicon {
+  color: white;
+}
+
+#user-footer {
+  background-color: royalblue;
+}
+
+#user-footer .glyphicon {
+  color: white;
+}
+
+
+#website-top-navbar {
+  background-color: black;
+}
+
+#website-top-navbar b {
+  color: white;
+}
+
+#website-top-navbar .glyphicon {
+  color: white;
+}
+
+#website-footer {
+  background-color: black;
+}
+
+#website-footer .glyphicon {
+  color: white;
+}
+
+
+
+#pages-top-navbar {
+  background-color: dimgrey;
+}
+
+#pages-top-navbar b {
+  color: white;
+}
+
+#pages-top-navbar .glyphicon {
+  color: white;
+}
+
+#pages-footer {
+  background-color: dimgrey;
+}
+
+#pages-footer .glyphicon {
+  color: white;
+}
+
+.list-group-item {
+  border: none;
+}
+
+.mk-widget .mk-toolbar {
+  background-color: ghostwhite;
+  border-radius: 20%;
+  opacity: 0.80;
+  padding: 7px;
+  right: 11px;
+  position: absolute;
+  z-index: 2;
+}
+
+.mk-widget {
+  padding-bottom: 20px;
+}
+
+.mk-widget .mk-content {
+  width: 100%;
+}
+
+.mk-video-container {
+  position:relative;
+  padding-bottom:56.25%;
+  padding-top:30px;
+  height:0;
+  overflow:hidden;
+  z-index: 1;
+}
+
+.mk-video-container iframe, .mk-video-container object, .mk-video-container embed {
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
+

@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <a [routerLink]="['/post/category/general']">
+    More For You
+  </a>
+  <br>
+
+
+  <label>Top Headlines For You</label>
+  <br>
+
+
+
+  <ul class = "list-group">
+    <li class = "list-group-item" *ngFor = "let news of result.articles">
+      <a  href = {{news.url}}>
+        {{news.title}}
+      </a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <a (click)="goTo()"><h2>Post List</h2></a>
+
+  <h1 style="text-align: center">User List</h1>
+  <div>
+    <ul>
+      <li *ngFor="let user of users"
+          class="list-group-item">
+        <a>{{user.username}}</a>
+        <a>
+          <span (click)="deleteUser(user._id)"
+                class="pull-right glyphicon glyphicon-remove"></span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+

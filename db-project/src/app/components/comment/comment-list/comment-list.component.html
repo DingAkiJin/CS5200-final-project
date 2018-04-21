@@ -1,0 +1,22 @@
+<!-- List Items -->
+<div *ngFor="let comment of comments">
+
+  <ul class="list-group">
+    <li class="list-group-item" style="border: solid; padding-top: 0%;">
+
+      <div class="row container-fluid">
+        <div class="col-sm-4 pull-left">
+          <h5><b>By: {{comment.userName}}</b></h5>
+        </div>
+        <div class="col-sm-8" style="text-align-last: right">
+          <h5>{{comment.dateCreated}}</h5>
+        </div>
+      </div>
+
+      <div class="row container-fluid">
+        <p style="text-indent: 8%">{{comment.text}}</p>
+      </div>
+
+    </li>
+  </ul>
+</div>
