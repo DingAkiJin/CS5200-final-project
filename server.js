@@ -42,7 +42,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 
 // CORS
 app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://localhost:4500"); // when deployed on
+  res.header("Access-Control-Allow-Origin", "*"); // when deployed on
   // Heroku, use * instead of 4200 is ok, since server and 4200 are treated as the same domain there
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
