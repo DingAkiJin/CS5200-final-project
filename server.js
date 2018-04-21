@@ -58,7 +58,7 @@ app.use('/api', api);
 
 
 // Get port from environment and store in Express.
-const port = '3500' ;
+const port = process.env.PORT ||'3500' ;
 app.set('port', port);
 
 // Create HTTP server
@@ -82,4 +82,4 @@ var PPORT = process.env.PORT || port;
 
 //Listen on provided port, on all network interfaces.
 
-server.listen(process.env.PORT , () => console.log(`API running on localhost:${port}`)); //-- working on LocalHost
+server.listen(PPORT , () => console.log(`API running on localhost:${port}`)); //-- working on LocalHost
