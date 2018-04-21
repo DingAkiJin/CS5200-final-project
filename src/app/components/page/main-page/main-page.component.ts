@@ -18,6 +18,14 @@ export class MainPageComponent implements OnInit {
         console.log(result);
       });
   }
+
+  searchNewsByCategory(title: String) {
+    this.newsService.searchNewsByCategory(title)
+      .subscribe((result) => {
+        this.result = result;
+        console.log(result);
+      });
+  }
   alltopnews() {
     this.newsService.alltopnews()
       .subscribe((result) => {
