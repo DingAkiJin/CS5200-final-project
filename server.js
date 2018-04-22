@@ -39,7 +39,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Point static path to dist -- For building
  app.use(express.static(path.join(__dirname, 'dist')));
-
+//
 // CORS
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*"); // when deployed on

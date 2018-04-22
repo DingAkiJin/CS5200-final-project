@@ -72,7 +72,7 @@ function unfollowUser(id, username){
   }
 
   function findUserById(userId) {
-    return UserModel.findById(userId);
+    return UserModel.findOne({_id: userId});
   }
 
   function findUserByCredentials(username, password) {
