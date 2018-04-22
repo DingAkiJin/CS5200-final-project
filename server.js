@@ -1,3 +1,6 @@
+/**
+ * Created by sesha on 6/2/17.
+ */
 
 // Get dependencies
 const express = require('express');
@@ -48,10 +51,10 @@ app.use(function(req, res, next) {
 });
 
 // For Build: When we build, we serve this for dist
-const api = require('./server/routes/api');
+// const api = require('./server/routes/api');
 
 // Set our api routes
-app.use('/api', api);
+// app.use('/api', api);
 
 
 // Get port from environment and store in Express.
