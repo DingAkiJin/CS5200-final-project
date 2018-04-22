@@ -1,0 +1,115 @@
+<!-- Top Nav -->
+<nav class="navbar navbar-default navbar-fixed-top ">
+  <div class="container-fluid">
+
+    <!--heading on the nav bar-->
+    <div class="navbar-header pull-left">
+      <a class="navbar-brand thick">
+        <b>Edit User</b>
+      </a>
+    </div>
+
+    <!--tick mark-->
+    <div class="navbar-text pull-right">
+      <a  (click)="updateUser()"
+          class="navbar-link">
+        <span class="glyphicon glyphicon-ok"></span>
+      </a>
+    </div>
+
+  </div>
+</nav>
+
+
+<div class="container">
+  <div *ngIf=messageFlag
+       class="alert alert-info">
+    {{message}}
+  </div>
+  <form>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input [(ngModel)]="username"
+             name="username"
+             type="text"
+             class="form-control"
+             id="username"/>
+    </div>
+  </form>
+
+  <form>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input [(ngModel)]="email"
+             name="email"
+             type="email"
+             class="form-control"
+             id="email"/>
+    </div>
+  </form>
+
+  <form>
+    <div class="form-group">
+      <label for="first-name">First Name</label>
+      <input [(ngModel)]="firstname"
+             name="firstname"
+             type="text"
+             class="form-control"
+             id="first-name"/>
+    </div>
+  </form>
+
+  <form>
+    <div class="form-group">
+      <label for="last-name">Last Name</label>
+      <input [(ngModel)]="lastname"
+             name="lastname"
+             type="text"
+             class="form-control"
+             id="last-name"/>
+    </div>
+  </form>
+
+  <form>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input [(ngModel)]="password"
+             name="password"
+             type="password"
+             class="form-control"
+             id="password"
+             placeholder="Password">
+    </div>
+  </form>
+
+  <form>
+    <div class="form-group">
+      <label for="verifyPassword">Verify Password</label>
+      <input [(ngModel)]="verify"
+             name="verify"
+             type="password"
+             class="form-control"
+             id="verifyPassword"
+             placeholder="Verify Password">
+    </div>
+  </form>
+
+
+
+
+</div>
+
+<br>
+
+<!-- Footer -->
+<nav class="navbar navbar-default navbar-fixed-bottom ">
+  <div class="container-fluid">
+    <div class="navbar-text pull-right" style="text-decoration-color: white">
+
+      <a [routerLink]="['/admin/user']">
+        <span class="glyphicon glyphicon-user"></span>
+      </a>
+    </div>
+
+  </div>
+</nav>

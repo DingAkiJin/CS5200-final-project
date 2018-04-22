@@ -20,6 +20,7 @@ import {CommentListComponent} from './components/comment/comment-list/comment-li
 import {FollowListComponent} from "./components/follows/follow-list/follow-list.component";
 import {PostCategoryComponent} from "./components/page/post-category/post-category.component";
 import {MainPageLoggedinComponent} from "./components/page/main-page-loggedin/main-page-loggedin.component";
+import {AdminEditUserComponent} from './components/user/admin-user/admin-edit-user/admin-edit-user.component';
 
 
 const APP_ROUTES: Routes = [
@@ -44,6 +45,7 @@ const APP_ROUTES: Routes = [
   {path: 'share/post/:pid', component: SharedPostComponent},
   {path: 'user/follows', component: FollowListComponent , canActivate: [AuthenticationService]},
   {path: 'share/post/:pid', component: SharedPostComponent, canActivate: [AuthenticationService]},
+  {path: 'admin/:uid', component: AdminEditUserComponent}
 
 ];
 

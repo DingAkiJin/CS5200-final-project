@@ -35,6 +35,6 @@ export class AdminUserComponent implements OnInit {
         this.router.navigate(['admin', 'user']);
       },
         (error: any) => console.log(error));
-  }
+    }
 
 }

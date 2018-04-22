@@ -51,6 +51,7 @@ import { AdminUserComponent } from './components/user/admin-user/admin-user.comp
 import { FollowListComponent } from './components/follows/follow-list/follow-list.component';
 import { MainPageLoggedinComponent } from './components/page/main-page-loggedin/main-page-loggedin.component';
 import { AdminPostComponent } from './components/user/admin-user/admin-post/admin-post.component';
+import { AdminEditUserComponent } from './components/user/admin-user/admin-edit-user/admin-edit-user.component';
 
 
 
@@ -89,8 +90,9 @@ import { AdminPostComponent } from './components/user/admin-user/admin-post/admi
 
     MainPageLoggedinComponent,
 
-    AdminPostComponent
+    AdminPostComponent,
 
+    AdminEditUserComponent,
   ],
   imports: [
     HttpModule,

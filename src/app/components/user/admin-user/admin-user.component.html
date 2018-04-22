@@ -11,6 +11,9 @@
           <span (click)="deleteUser(user._id)"
                 class="pull-right glyphicon glyphicon-remove"></span>
         </a>
+        <a [routerLink]="['/admin', user._id]">
+          <span class="pull-right glyphicon glyphicon-cog"></span>
+        </a>
       </li>
     </ul>
   </div>
