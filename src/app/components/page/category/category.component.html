@@ -19,42 +19,39 @@
 </nav>
 
 
-<div class="container-fluid">
+<div class="container-fluid col-sm-12" style="background:url(http://legalprom.cl/wp-content/uploads/2014/05/main-bg.jpg) no-repeat center fixed;">
   <form>
-    <div class="form-group">
+    <div class="form-group col-sm-8">
+
+    </div>
+  <form>
+    <div class="form-group col-sm-4">
       <input [(ngModel)]="title"
              type="text"
              class="form-control"
              name="search"
              id="search"
-             placeholder="Search for News">
+             placeholder="Search for News, e.g. BBC">
+      <button (click) = "searchNewsByCategory(title)" class = "btn btn-primary btn-block">Search</button>
+      <button [routerLink]="['/post/category/general']" class = "btn btn-info btn-block">View Our Users Posts</button>
     </div>
   </form>
-  <button (click) = "searchNewsByCategory(title)" class = "btn btn-primary btn-block">Search</button>
-  <button [routerLink]="['/post/category/general']" class = "btn btn-info btn-block">View Our Users Posts</button>
-
-  <br>
-<div style="border: solid; border-radius: 20%; border-width: 0.5px;">
-  <h1 style="text-align: center; font-family: 'Times New Roman';"><b>Inteli-News</b></h1>
-  <p style="text-align: center; font-family: 'Times New Roman'; padding-left: 6%; padding-right: 6%; font-size: large">
-
-    Our Web News App is a place that promotes a more enlightened discussion on current news trends by enabling users to
-    follow links to news articles from top media outlets, as well as posts from our verified, world renowned writers and
-    industry professionals. Our subscribed users are able to post questions and receive an in-depth reply by our industry professionals.
-  </p>
-</div>
+  </form>
 
 
   <br>
+  <br>
+  <br>
+  <br>
 
-  <div>
+  <div style="background-color: transparent">
     <h3
       style="text-align: left; font-family: 'Times New Roman'">Articles From Outside Sources:</h3>
 
 
 
     <ul class = "list-group">
-      <li class = "list-group-item" *ngFor = "let news of result.articles">
+      <li style="background-color: transparent" class = "list-group-item" *ngFor = "let news of result.articles">
         <a  href = {{news.url}}>
           {{news.title}}
         </a>

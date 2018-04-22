@@ -35,6 +35,7 @@ export class CategoryComponent implements OnInit {
 
   ngOnInit() {
     this.user = this.sharedService.user;
+    console.log(this.user);
     this.userName = this.user.username;
     this.newsService.alltopnews()
       .subscribe((result) => {

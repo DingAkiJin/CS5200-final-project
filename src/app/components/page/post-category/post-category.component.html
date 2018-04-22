@@ -27,13 +27,14 @@
 </nav>
 
 
-<div class="container-fluid">
+<div class="container-fluid col-sm-12" style="background:url(http://legalprom.cl/wp-content/uploads/2014/05/main-bg.jpg) no-repeat center fixed;">
   <div>
-    <h1 style="text-align: center; font-family: 'Times New Roman'">Articles From Our Users</h1>
-    <br>
 
+    <br>
+    <div class="form-group col-sm-6">
+      <h1 style="text-align: center; font-family: 'Times New Roman'">Articles From IStory</h1>
     <ul class = "list-group">
-      <li class = "list-group-item" *ngFor="let post of posts">
+      <li style="background-color: transparent" class = "list-group-item" *ngFor="let post of posts">
         <ul class="list-inline">
           <li class="list-inline-item">
             <a  (click)="GoTo(post._id)">{{post.title}}</a>
@@ -46,17 +47,17 @@
             </a>
           </li>
         </ul>
-
-
       </li>
     </ul>
   </div>
+    <div class="form-group col-sm-6">
+    </div>
 
 
 
 </div>
 
-<nav id="user-footer" class="navbar navbar-default navbar-fixed-bottom">
+<nav class="navbar navbar-default navbar-fixed-bottom">
   <div class="container-fluid">
     <div class="navbar-text pull-right">
       <a [routerLink]="['/login']">

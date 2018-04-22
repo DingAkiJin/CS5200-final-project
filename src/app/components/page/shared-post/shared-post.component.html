@@ -26,7 +26,7 @@
   </div>
 </nav>
 
-<div class="container-fluid">
+<div class="container-fluid form-login">
   <div class="row container-fluid">
     <div class="title-hf">
       <h1>{{post.title}} </h1>
@@ -50,7 +50,7 @@
       </li>
 
       <li class="list-group-item">
-        <a class="btn btn-success btn-block" (click)="postComment()">Add a Comment</a>
+        <a class="btn btn-primary btn-block" (click)="postComment()">Add a Comment</a>
       </li>
 
     </ul>
@@ -60,8 +60,8 @@
 <nav class="nav navbar navbar-default navbar-fixed-bottom">
   <div class="container-fluid">
     <p class="navbar-text pull-right">
-      <a [routerLink]="['/profile']">
-        <span></span>
+      <a [routerLink]="['/login']">
+        <span class="glyphicon glyphicon-log-in"></span>
       </a>
     </p>
 

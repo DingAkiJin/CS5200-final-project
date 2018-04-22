@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import {ActivatedRoute,Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {PostService} from '../../../service/post.service.client';
-import {SharedService} from "../../../service/shared.service.client";
-import {UserService} from "../../../service/user.service.client";
+import {SharedService} from '../../../service/shared.service.client';
+import {UserService} from '../../../service/user.service.client';
 
 
 @Component({
@@ -24,12 +24,13 @@ export class PostCategoryComponent implements OnInit {
   constructor(private sharedService: SharedService,
               private postService: PostService,
               private activatedRoute: ActivatedRoute,
-              private userService: UserService,
-              private router: Router) { }
+              private userService: UserService, private router: Router) { }
+
 
 
   ngOnInit() {
-    this.user = this.sharedService.user;
+    this.loggedinuser = this.sharedService.user;
+    console.log('find' + this.loggedinuser);
     this.activatedRoute.params.subscribe((params: any) => {
       this.categoryName = params['categoryName'];
       // console.log(this.categoryName);
@@ -42,28 +43,30 @@ export class PostCategoryComponent implements OnInit {
   }
 
   followUser(userId)  {
-
+    console.log('logged in user' + this.sharedService.user);
     this.userService.findUserById(userId)
-      .subscribe((user) => {
+      .subscribe((data) => {
       // this.username = user.username;
         const follows = {
           userId: userId,
-          username: user.username
+          username: data.username
         };
-        this.userService.findUserByUsername(this.loggedname)
-          .subscribe((response) => {
-            const userFollows = response.follows;
-            for ( const i in userFollows) {
-              if (userFollows[i].username = this.username) {
-                alert('Yor are already following this user!');
-                return;
-              }
-            }
-          });
+        console.log(follows);
+        // this.userService.findUserByUsername(this.loggedname)
+        //   .subscribe((response) => {
+        //     const userFollows = response.follows;
+        //     for ( const i in userFollows) {
+        //       if (userFollows[i].username = this.username) {
+        //         alert('Yor are already following this user!');
+        //         return;
+        //       }
+        //     }
+        //   });
         this.userService.followUser(this.loggedinuser._id, follows)
           .subscribe(
             (status) => {
               this.user = status;
+              console.log(this.user);
             }
           );
       });

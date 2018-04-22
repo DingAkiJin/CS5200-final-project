@@ -39,7 +39,7 @@ const APP_ROUTES: Routes = [
   {path: 'category/:categoryName/post/:pid/comment', component: CommentListComponent, canActivate: [AuthenticationService]},
   {path: 'category/:categoryName/post/:pid/comment/new', component: CommentNewComponent, canActivate: [AuthenticationService]},
   {path: 'category', component: CategoryComponent, canActivate: [AuthenticationService]},
-  {path: 'post/category/:categoryName', component: PostCategoryComponent},
+  {path: 'post/category/:categoryName', component: PostCategoryComponent, canActivate: [AuthenticationService]},
   {path: 'category/:categoryName/post', component: CategoryComponent},
   {path: 'share/post/:pid', component: SharedPostComponent},
   {path: 'user/follows', component: FollowListComponent , canActivate: [AuthenticationService]},
