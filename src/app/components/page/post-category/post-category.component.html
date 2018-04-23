@@ -1,0 +1,69 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="row container-fluid">
+
+    <div class="col-sm-12">
+
+
+      <div class="navbar-text pull-left" style="margin-left: 0px;">
+        <a [routerLink]="['/category']" class="navbar-link">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+      </div>
+
+
+      <div class="navbar-header pull-left">
+        <a class="navbar-brand">
+          <b style="text-transform: capitalize">Welcome</b>
+        </a>
+      </div>
+
+      <div class="navbar-text pull-right" >
+        <a [routerLink]="['/profile']">
+          <span class="glyphicon glyphicon-user"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid col-sm-12" style="background:url(http://legalprom.cl/wp-content/uploads/2014/05/main-bg.jpg) no-repeat center fixed;">
+  <div>
+
+    <br>
+    <div class="form-group col-sm-6">
+      <h1 style="text-align: center; font-family: 'Times New Roman'">Articles From IStory</h1>
+    <ul class = "list-group">
+      <li style="background-color: transparent" class = "list-group-item" *ngFor="let post of posts">
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a  (click)="GoTo(post._id)">{{post.title}}</a>
+            <p>By: {{post.author}}</p>
+          </li>
+          <li class="list-inline-item pull-right">
+            <a (click)= followUser(post._user) class="btn btn-primary btn-sm" type="submit">
+              <span class="glyphicon glyphicon glyphicon-heart"></span>
+              Follow Writer
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+    <div class="form-group col-sm-6">
+    </div>
+
+
+
+</div>
+
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-text pull-right">
+      <a [routerLink]="['/login']">
+        <span class="glyphicon glyphicon-log-in"></span>
+      </a>
+    </div>
+  </div>
+</nav>
+

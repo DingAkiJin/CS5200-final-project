@@ -1,0 +1,48 @@
+
+
+<div class="container">
+  <div class = "form-login">
+  <h1>Register</h1>
+  <span class="help-block" *ngIf="disabledFlag">
+      {{error}}
+  </span>
+  <form>
+    <div class="form-group">
+      <input [(ngModel)]="username"
+             type="text"
+             class="form-control"
+             name="username"
+             id="username"
+             placeholder="Username">
+    </div>
+  </form>
+
+  <form>
+    <div class="form-group">
+      <input [(ngModel)]="password"
+             type="password"
+             class="form-control"
+             name="password"
+             id="password"
+             placeholder="Password">
+    </div>
+  </form>
+
+  <form>
+    <div class="form-group">
+      <input [(ngModel)]="verify"
+             type="password"
+             class="form-control"
+             id="verify"
+             name="verify"
+             placeholder="Verify Password">
+    </div>
+  </form>
+
+  <a class="btn btn-info btn-block"
+     (click)="register(username, password, verify)">
+    Register</a>
+  <a class="btn btn-danger btn-block"
+     routerLink="/" >Cancel</a>
+  </div>
+</div>

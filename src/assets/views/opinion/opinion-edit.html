@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for making website for mobile-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="initial-scale=1, user-scalable=no">
+
+
+  <meta charset="UTF-8">
+  <title>User Profile</title>
+  <link href="../../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="../../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+  <!-- STYLE sheet comes after all the libraries are loaded. Document style-->
+
+  <link href="../../css/style.css" rel="stylesheet"/>
+
+</head>
+<body>
+<nav id="website-top-navbar" class="navbar navbar-default navbar-fixed-top">
+  <div class="row container-fluid">
+
+    <div class="col-sm-4 hidden-xs">
+      <div class="navbar-text pull-left" style="margin-left: 0px;">
+        <a [routerLink]="['/user', userId, 'website']">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+      </div>
+
+      <div class="navbar-header pull-left">
+        <a class="navbar-brand">
+          <b>Websites</b>
+        </a>
+      </div>
+
+      <div class="navbar-text pull-right">
+        <a [routerLink]="['/user', userId, 'website', 'new']">
+          <span class="glyphicon glyphicon-plus"></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-sm-8">
+      <div class="navbar-text pull-left hidden-sm hidden-md hidden-lg" >
+        <a [routerLink]="['/user', userId, 'website']">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+      </div>
+
+      <div class="navbar-text pull-right" >
+        <a (click)="edit($event)">
+          <span class="glyphicon glyphicon-ok"></span>
+        </a>
+      </div>
+
+      <div class="navbar-header pull-left">
+        <a class="navbar-brand">
+          <b>Edit</b>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</nav>
+</body>
+</html>
